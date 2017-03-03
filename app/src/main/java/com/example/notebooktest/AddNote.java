@@ -106,7 +106,7 @@ public class AddNote extends Activity implements OnClickListener{
 			return;
 		}
 		//摧毁当前活动
-		Log.i("data","存储为"+noteText.getText().toString());
+		Log.i("data","存储为ff"+noteText.getText().toString());
 		finish();
 	}
 	@Override
