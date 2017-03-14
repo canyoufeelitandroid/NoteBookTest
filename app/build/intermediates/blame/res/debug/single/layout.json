@@ -12,20 +12,20 @@
         "source": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notecontent.xml",
-        "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\layout\\notecontent.xml"
-    },
-    {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notecontent.xml",
+        "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\layout\\notecontent.xml"
     },
     {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
         "source": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
@@ -40,12 +40,12 @@
         "source": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",

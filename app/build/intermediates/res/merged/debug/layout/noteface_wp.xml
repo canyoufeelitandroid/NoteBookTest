@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="wrap_content"
     android:id="@+id/face_note_1"
     android:padding="10dp">
 
@@ -14,8 +17,8 @@
 
     <com.thread.manyclass.AvatarImageView
         android:id="@+id/note_pic"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentRight="true"
         android:layout_below="@id/istop_1"
         android:src="@drawable/e"
@@ -66,4 +69,12 @@
         android:layout_below="@id/timeline_1"
         android:layout_toLeftOf="@id/note_pic"
         />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_2"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
 </RelativeLayout>

@@ -16,8 +16,16 @@
         "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\link.png"
     },
     {
+        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\party.png",
+        "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\party.png"
+    },
+    {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\blank.png",
         "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\blank.png"
+    },
+    {
+        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\all_directions.png",
+        "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\all_directions.png"
     },
     {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\search.png",
@@ -32,6 +40,10 @@
         "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\edit.png"
     },
     {
+        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\moon.png",
+        "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\moon.png"
+    },
+    {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
         "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     },
@@ -42,6 +54,10 @@
     {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\pushpin.png",
         "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\pushpin.png"
+    },
+    {
+        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\sun.png",
+        "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\sun.png"
     },
     {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\cancel.png",
@@ -62,6 +78,10 @@
     {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\mypic.png",
         "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\mypic.png"
+    },
+    {
+        "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\work_briefcase.png",
+        "source": "F:\\mycourse\\NotebookTest\\app\\src\\main\\res\\drawable-xxhdpi\\work_briefcase.png"
     },
     {
         "merged": "F:\\mycourse\\NotebookTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\back_med.png",

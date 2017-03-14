@@ -1,8 +1,11 @@
 package com.example.notebooktest;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.design.widget.NavigationView;
@@ -10,6 +13,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -17,11 +21,14 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+	//记录第一次按下返回的时间（毫秒）
+	long firstTime=0;
 	//左侧菜单
 	private DrawerLayout mDrawerLayout;
 	private NavigationView mNavigationView;
@@ -38,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	SQLiteDatabase db;
 	String sql="select * from NoteBook order by top_id desc";
 	private ListView lv1;
+
+
 
 	//异步加载：选择菜单栏上的栏目后，修改成对应的标题和内容
 	private android.os.Handler handler=new android.os.Handler(){
@@ -76,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	}
 
 	private void inttUI(){
+
 		//左侧菜单
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.menu_layout_main);
 		mNavigationView = (NavigationView) findViewById(R.id.main_leftmenu);
@@ -112,9 +122,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				contentIntent.putExtra("top_id",top_id);
 				startActivity(contentIntent);
 			}
-
 		});
+		lv1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+			@Override
+			public boolean onItemLongClick(AdapterView<?> adapterView, View view, final int i, long l) {
+				AlertDialog.Builder dialog=new AlertDialog.Builder(MainActivity.this);
+				dialog.setTitle("Delete Note?");
+				dialog.setMessage("Are you sure to delete this note?");
+				dialog.setCancelable(false);
+				dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+                        return;
+					}
+				});
+				dialog.setPositiveButton("Sure", new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						int note_id=noteList.get(i).getId();
+                        Log.i("data","note_id is "+note_id);
+						db.execSQL("delete from NoteBook where id="+note_id);
+						noteList.remove(i);
+						Toast.makeText(getApplicationContext(), "Delete Succeed", Toast.LENGTH_SHORT).show();
+						adapter.notifyDataSetChanged();
+					}
+				});
+				dialog.show();
+				return false;
+			}
+		});
 	}
 
 	//菜单点击监听事件
@@ -134,10 +173,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 							new Thread(new Runnable() {
 								@Override
 								public void run() {
-
-
 									data=BelongId(belong_id);
-
 									if(data!=0){
 									noteList.clear();
 										String sql_new="select * from NoteBook where belong_id = "+data;
@@ -216,6 +252,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			break;
 		}
 	}
+
 	
 	@Override
 	protected void onRestart() {
@@ -234,4 +271,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		super.onBackPressed();
 	}
 
+	@Override
+	public boolean onKeyUp(int keyCode, KeyEvent event) {
+		if(keyCode==KeyEvent.KEYCODE_BACK){
+			long secondTime=System.currentTimeMillis();
+			if(secondTime-firstTime>800){//如果两次按键时间间隔大于800毫秒，则不退出
+				Toast toast=Toast.makeText(MainActivity.this,"再按一次退出程序",Toast.LENGTH_SHORT);
+				toast.getView().setBackgroundColor(Color.parseColor("#FFCC00"));
+
+				toast.show();
+				firstTime=secondTime;
+				return true;
+			}else{
+				System.exit(0);
+			}
+		}
+		return super.onKeyUp(keyCode, event);
+	}
 }

@@ -24,9 +24,10 @@ public class SearchActivity extends Activity implements OnClickListener{
 	private EditText searchText;
 	private ListView lv2;
 	public List<MyNote> snoteList=new ArrayList<MyNote>(); 
-	NoteAdapter sadapter;
-	String sql="select * from NoteBook";
-	private MyDatabaseHelper sdbHelper;
+	//NoteAdapter sadapter;
+	private MyNoteAdapter sadapter;
+	String sql="select * from NoteBook order by top_id desc";
+    private MyDatabaseHelper sdbHelper;
 	SQLiteDatabase sdb;
 	//private PublicDB publicDB;
 
@@ -78,7 +79,8 @@ public class SearchActivity extends Activity implements OnClickListener{
 		backBtn=(ImageButton)findViewById(R.id.sh_back);
 		backBtn.setOnClickListener(this);
 		lv2=(ListView)findViewById(R.id.lv2);
-		sadapter=new NoteAdapter(this, R.layout.noteface, snoteList);
+		//sadapter=new NoteAdapter(this, R.layout.noteface, snoteList);
+		sadapter=new MyNoteAdapter(SearchActivity.this,snoteList);
 		searchText=(EditText)findViewById(R.id.searchText);
 
 		lv2.setAdapter(sadapter);
@@ -163,7 +165,5 @@ public class SearchActivity extends Activity implements OnClickListener{
 		}
 		
 	}
-	
-	
- 
+
 	}

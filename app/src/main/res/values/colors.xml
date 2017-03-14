@@ -7,4 +7,6 @@
     <color name="searchColor">#FFC125</color>
     <color name="darkColor">#FF7F00</color>
     <color name="glay">#FFEC8B</color>
+    <color name="red">#FF0000</color>
+    <color name="simple_red">#FF6A6A</color>
 </resources>

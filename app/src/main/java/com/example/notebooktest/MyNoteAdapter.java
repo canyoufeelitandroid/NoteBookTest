@@ -17,7 +17,7 @@ import com.thread.manyclass.AvatarImageView;
 
 import java.util.List;
 
-public class MyNoteAdapter extends BaseAdapter {
+public class MyNoteAdapter extends BaseAdapter{
     private List<MyNote> ls;
     private Context mContext;
     final int VIEW_TYPE = 2;
@@ -26,9 +26,16 @@ public class MyNoteAdapter extends BaseAdapter {
     private LayoutInflater inflater;
 
 
+//    private MainActivity.OnMyLongClickListener onMyLongClickListener;
+//    private void setOnMyLongClickListener(MainActivity.OnMyLongClickListener myLongClickListener){
+//        this.onMyLongClickListener=myLongClickListener;
+//    }
+
     public MyNoteAdapter(Context context, List<MyNote> list) {
+
         ls=list;
         mContext=context;
+
     }
 
     @Override
@@ -57,11 +64,7 @@ public class MyNoteAdapter extends BaseAdapter {
             }
         }
         return TYPE_1;
-//        if(position==1){
-//            return TYPE_2;
-//        }else{
-//            return  TYPE_1;
-//        }
+
     }
 
     @Override
@@ -105,14 +108,7 @@ public class MyNoteAdapter extends BaseAdapter {
                 default:
                     break;
             }
-//            viewHolder=new ViewHolder();
-//            viewHolder.dtext=(TextView) view.findViewById(R.id.dtext);
-//            viewHolder.ttext=(TextView) view.findViewById(R.id.ttext);
-//            viewHolder.ntext=(TextView) view.findViewById(R.id.ntext);
-//            viewHolder.itext=(TextView) view.findViewById(R.id.itext);
-//            viewHolder.iv=(ImageView)view.findViewById(R.id.istop);
-//            viewHolder.mainLayout=(RelativeLayout) view.findViewById(R.id.face_note) ;
-//            view.setTag(viewHolder);
+
         }else{
             switch (type){
                 case TYPE_1:
@@ -184,42 +180,20 @@ public class MyNoteAdapter extends BaseAdapter {
             default:
                 break;
         }
-
-//        viewHolder.dtext.setText(mynote.getmyDate());
-//        viewHolder.ttext.setText(mynote.getmyTime().toString());
-//        viewHolder.itext.setText(String.valueOf(mynote.getId()));
-//        final String note_tag=mynote.getmyNote().concat(String.valueOf(mynote.getId()));
-//        viewHolder.iv.setTag(note_tag);
-//        viewHolder.iv.setImageResource(R.drawable.more);
-//        if(mynote.getTop_id()==1) {
-//            ImageView imageView=(ImageView)view.findViewWithTag(note_tag);
-//            imageView.setImageResource(R.drawable.pushpin);
-//            //imageView.setTag("");
-//        }
-//        //≈–∂œ «∑Ò∞¸∫¨Õº∆¨≤¢œ‘ æ £”‡Œƒ◊÷ƒ⁄»›
-//        String myNoteText=mynote.getmyNote();
-//        String text[]=myNoteText.split("//pic:");
-//        StringBuilder mNote=new StringBuilder();
-//        for(int i=0;i<text.length;i++){
-//            if(!text[i].contains("content://media/external/images/media/")){
-//                mNote.append(text[i]+" ");
-//            }
-//        }
-//        viewHolder.ntext.setText(mNote);
         return convertView;
     }
 
 
-
-    class ViewHolder1{
+    class ViewHolder1 {
         TextView dtext1;
         TextView ttext1;
         TextView ntext1;
         TextView itext1;
         ImageView iv1;
         RelativeLayout mainLayout1;
+
     }
-    class ViewHolder2{
+    class ViewHolder2 {
         TextView dtext2;
         TextView ttext2;
         TextView ntext2;
@@ -227,6 +201,7 @@ public class MyNoteAdapter extends BaseAdapter {
         ImageView iv2;
         RelativeLayout mainLayout2;
         AvatarImageView imageView2;
+
     }
 
 }

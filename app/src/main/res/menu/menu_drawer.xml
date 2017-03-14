@@ -5,30 +5,30 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_home"
-            android:icon="@drawable/mypic"
+            android:icon="@drawable/pikachu"
             android:title="Live"/>
         <item
             android:id="@+id/menu_messages"
-            android:icon="@drawable/mypic"
+            android:icon="@drawable/work_briefcase"
             android:title="Work"/>
         <item
             android:id="@+id/menu_friends"
-            android:icon="@drawable/mypic"
+            android:icon="@drawable/party"
             android:title="Friends"/>
         <item
             android:id="@+id/menu_discussion"
-            android:icon="@drawable/mypic"
+            android:icon="@drawable/all_directions"
             android:title="All"/>
     </group>
 
     <item android:title="Sub items">
         <menu>
             <item
-                android:icon="@drawable/mypic"
-                android:title="Sub item 1"/>
+                android:icon="@drawable/sun"
+                android:title="Day Type"/>
             <item
-                android:icon="@drawable/mypic"
-                android:title="Sub item 2"/>
+                android:icon="@drawable/moon"
+                android:title="Night Type"/>
         </menu>
     </item>
 

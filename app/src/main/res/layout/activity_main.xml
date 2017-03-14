@@ -43,6 +43,7 @@
       android:background="@drawable/add_button_pressed"
       android:layout_gravity="center_horizontal|bottom"
       />
+
 </FrameLayout>
 
     <android.support.design.widget.NavigationView
